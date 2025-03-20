@@ -14,7 +14,7 @@ and summarizing the entire video and providing the important summary in points
 within 250 words. Please provide the summary of the text given here:  """
 
 
-## getting the transcript data from yt videos
+## getting the transcript data conda from yt videos
 def extract_transcript_details(youtube_video_url):
     try:
         video_id=youtube_video_url.split("=")[1]
@@ -52,7 +52,3 @@ if st.button("Get Detailed Notes"):
         summary=generate_gemini_content(transcript_text,prompt)
         st.markdown("## Detailed Notes:")
         st.write(summary)
-
-
-
-
